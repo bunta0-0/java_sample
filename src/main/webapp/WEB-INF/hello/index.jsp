@@ -5,8 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-    <p>Hello World!</p>
-    <c:set var="hello" value="${3 + 12 / 5}" />
-    <c:out value="${hello}" />
+    <form action="/hello" method="post">
+        <label>名前</label>
+        <input type="text" name="name">
+        <br>
+        <label>パスワード</label>
+        <input type="text" name="pass">
+        <br>
+        <button type="submit">送信</button>
+    </form>
 </body>
 </html>
