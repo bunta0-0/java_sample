@@ -25,8 +25,8 @@ public class Repository extends Client {
             //必要事項を代入
             stmt = connection.prepareStatement(sql);
             stmt.setString(1, category.getName());
-            stmt.setTimestamp(2, category.getCreatedAt());
-            stmt.setTimestamp(3, category.getUpdatedAt());
+            stmt.setTimestamp(2, currentTime);
+            stmt.setTimestamp(3, currentTime);
             stmt.setInt(4, category.getUserId());
 
             //sql文を実行
