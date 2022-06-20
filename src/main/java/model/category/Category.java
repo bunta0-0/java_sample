@@ -1,8 +1,10 @@
 package model.category;
 
 import model.Default;
+import model.user.User;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 
 public class Category extends Default { //CateogryクラスはDefaultクラスを継承する
     //Categoryクラスが独自で持つ属性はnameとuserId(外部キー)だけ
@@ -38,4 +40,8 @@ public class Category extends Default { //CateogryクラスはDefaultクラス�
         Repository.insertCategory(this);
     }
 
+    public static ArrayList<Category> indexCategories(User user) {
+        return Repository.indexCategories(user);
+    }
 }
+
