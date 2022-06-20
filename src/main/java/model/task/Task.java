@@ -74,7 +74,7 @@ public class Task extends Default { //TaskクラスはDefaultクラスを継承�
         Repository.insert(this);
     }
 
-   /* public static ArrayList<model.task.Task> indexTasks(User user) {
+   public static ArrayList<model.task.Task> indexTasks(User user) {
         return Repository.indexTasks(user);
-    }*/
+    }
 }
