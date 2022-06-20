@@ -60,7 +60,6 @@ public class Insert extends HttpServlet {
         task.insert();
 
         //登録が完了したらマイページに遷移する
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/user/top.jsp");
-        dispatcher.forward(req, resp);
+        resp.sendRedirect("/task/read");
     }
 }

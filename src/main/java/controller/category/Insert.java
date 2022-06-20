@@ -46,8 +46,6 @@ public class Insert extends HttpServlet {
         //Categoryクラスが持つinsertCategoryを実行．これはsrc/main/java/model/category/Category.javaにある
         category.insertCategory();
 
-        //登録が完了したらマイページに遷移する
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/user/top.jsp");
-        dispatcher.forward(req, resp);
+        resp.sendRedirect("/task/read");
     }
 }
