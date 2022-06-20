@@ -41,12 +41,12 @@ public class Repository extends Client {
         }
     }
 
-    /*public static ArrayList<Task> indexTasks(User user) {
+    public static ArrayList<Task> indexTasks(User user) {
         Connection connection = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
         try {
-            String sql = "select * from categories where user_id = ?";
+            String sql = "select * from tasks where users_id = ?";
             connection = create();
             stmt = connection.prepareStatement(sql);
             stmt.setInt(1, user.getId());
@@ -61,8 +61,8 @@ public class Repository extends Client {
                         null,
                         null,
                         rs.getBoolean("completed"),
-                        rs.getInt("user_id"),
-                        rs.getInt("category_id")
+                        rs.getInt("users_id"),
+                        rs.getInt("categories_id")
                 );
                 tasks.add(task);
             }
@@ -73,5 +73,5 @@ public class Repository extends Client {
         } finally {
             close(connection, stmt, rs);
         }
-    }*/
+    }
 }

@@ -34,8 +34,7 @@ public class Login extends HttpServlet {
             HttpSession session = req.getSession(); // セッションを作って
             session.setAttribute("currentUser", currentUser); // セッションスコープに格納
             //ログインが成功したのでマイページに
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/user/top.jsp");
-            dispatcher.forward(req, resp);
+            resp.sendRedirect("/task/read");
         } else {
             req.setAttribute("Error", "アカウントが作成されていないか、アカウントが一致しません。"); // エラーの内容をリクエストスコープに格納
             RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/index.jsp");
